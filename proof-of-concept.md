@@ -1,25 +1,20 @@
 # Proof of Concept - Subscription Management System
 
-## Scope
-- App category: Social & Community
-- Entity model: Subscription Management Community Event
-- Deployable stack: Flask + SQLAlchemy + Gunicorn + Docker + CI
+## Deployment Readiness
+- Web app + API routes active
+- Container and PaaS deployment files included
+- Automated test suite and CI workflow included
 
-## Dynamic Field Configuration
-- Host: `host` (text)
-- Expected Attendees: `attendees` (number)
-- Community Notes: `community_notes` (textarea)
-
-## Run Evidence Commands
+## Smoke Commands
 ```bash
-python app.py
+python run.py
 curl http://localhost:5000/api/health
 curl http://localhost:5000/api/schema
-curl -X POST http://localhost:5000/api/records   -H "Content-Type: application/json"   -d '{"title":"Demo Record","status":"open","payload":{"host":"Demo value","attendees":12,"community_notes":"seed note"}}'
+curl -X POST http://localhost:5000/api/items   -H "Content-Type: application/json"   -d '{"title":"Phase3 Demo","status":"draft","payload":{"client":"sample","value_estimate":5,"commercial_notes":"notes"}}'
 curl http://localhost:5000/api/metrics
 ```
 
 ## Metadata
-- Idea number: 88
-- Generated UTC: 2026-03-24T15:52:22.456891+00:00
-- Status: Phase-2 complete
+- Generated UTC: 2026-03-24T16:15:12.037512+00:00
+- Phase: 3
+- Domain: Business

@@ -1,19 +1,19 @@
 GET /api/health
-{"status":"ok","app":"Subscription Management System","domain":"Social & Community"}
+{"status":"ok"}
 
 GET /api/schema
-{"statuses":["proposed", "open", "running", "archived"],"fields":[{"key":"host"},{"key":"attendees"},{"key":"community_notes"}]}
+{"domain":"Business","entity":"Commercial Workflow","statuses":["draft", "qualified", "approved", "fulfilled"]}
 
-POST /api/records
+POST /api/items
 {
   "id": 1,
-  "title": "Demo Record",
-  "status": "open",
+  "title": "Phase3 Demo",
+  "status": "draft",
   "payload": {
-    "host": "Demo value",
-    "attendees": 12,
-    "community_notes": "seed note"
+    "client": "sample",
+    "value_estimate": 5,
+    "commercial_notes": "notes"
   },
-  "created_at": "2026-03-24T15:52:22.457123+00:00",
-  "updated_at": "2026-03-24T15:52:22.457123+00:00"
+  "created_at": "2026-03-24T16:15:12.037748+00:00",
+  "updated_at": "2026-03-24T16:15:12.037748+00:00"
 }
